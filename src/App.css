@@ -1,0 +1,309 @@
+
+/* Remove the default padding and margin for the root element */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms, transform 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(var(--primary-rgb), 0.7));
+  transform: scale(1.05);
+  transition: filter 300ms, transform 300ms ease;
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(var(--primary-rgb), 0.7));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Professional card style */
+.card {
+  padding: 2em;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  background: linear-gradient(
+    145deg, 
+    rgba(var(--background-start-rgb), 0.85),
+    rgba(var(--background-end-rgb), 0.95)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 20px -10px rgba(var(--primary-rgb), 0.15),
+    0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.read-the-docs {
+  color: rgba(var(--primary-rgb), 0.7);
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: rgba(var(--primary-rgb), 0.9);
+}
+
+/* Professional hero section */
+.nextjs-hero {
+  background: 
+    radial-gradient(circle at top left, rgba(var(--primary-rgb), 0.05), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(var(--accent-rgb), 0.03), transparent 30%),
+    linear-gradient(to bottom, 
+      rgba(var(--background-start-rgb), 0.8), 
+      rgba(var(--background-end-rgb), 0.9)
+    );
+  border-radius: 0.5rem;
+  box-shadow: 
+    0 10px 30px -10px rgba(var(--primary-rgb), 0.1),
+    0 0 20px -10px rgba(var(--primary-rgb), 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+}
+
+/* Enhanced button styles */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(var(--primary-rgb), 1);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.4rem;
+  transform-origin: center;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 12px -5px rgba(var(--primary-rgb), 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms, transform 400ms;
+}
+
+/* Professional card design */
+.rich-card {
+  border-radius: 0.5rem;
+  background: rgba(20, 20, 30, 0.5);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+}
+
+.rich-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 20px rgba(var(--primary-rgb), 0.12),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Professional gradient text effect */
+.gradient-text {
+  background: linear-gradient(
+    to right, 
+    rgba(var(--primary-rgb), 1), 
+    rgba(var(--accent-rgb), 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: filter 0.3s ease;
+}
+
+.gradient-text:hover {
+  filter: brightness(1.1);
+}
+
+/* Professional premium glass */
+.premium-glass {
+  background: rgba(20, 20, 30, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Professional code block */
+.code-block {
+  background: rgba(15, 15, 20, 0.8);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  border-radius: 0.4rem;
+  box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Professional input field */
+.premium-input-field {
+  background-color: rgba(30, 30, 40, 0.6);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.premium-input-field:focus {
+  background-color: rgba(35, 35, 45, 0.7);
+  border-color: rgba(var(--primary-rgb), 0.3);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+}
+
+/* Professional dividers */
+.premium-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(var(--primary-rgb), 0.1),
+    transparent
+  );
+}
+
+/* Professional components */
+.pro-card {
+  background: rgba(20, 20, 30, 0.7);
+  border: 1px solid rgba(var(--primary-rgb), 0.1);
+  border-radius: 0.4rem;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.pro-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 15px rgba(var(--primary-rgb), 0.15),
+    0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pro-button {
+  background: rgba(var(--primary-rgb), 1);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pro-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(var(--primary-rgb), 0.3);
+}
+
+.pro-input {
+  background: rgba(25, 25, 35, 0.7);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.pro-input:focus {
+  border-color: rgba(var(--primary-rgb), 0.5);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.15);
+  outline: none;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(var(--primary-rgb), 0.15);
+  color: rgba(var(--primary-rgb), 1);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 0.4rem;
+  background: rgba(var(--primary-rgb), 0.1);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: rgba(var(--primary-rgb), 1);
+  border-radius: 0.2rem;
+  transition: width 0.5s ease;
+}
+
+/* Feature cards */
+.feature-card {
+  @apply rounded-xl border p-6 transition-all duration-300;
+  background: linear-gradient(
+    145deg, 
+    rgba(var(--background-start-rgb), 0.7), 
+    rgba(var(--background-end-rgb), 0.9)
+  );
+  border-color: rgba(var(--primary-rgb), 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.feature-card:hover {
+  @apply shadow-xl border-primary/30;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -10px rgba(var(--primary-rgb), 0.2);
+}
